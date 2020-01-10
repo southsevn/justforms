@@ -1,0 +1,217 @@
+body
+  padding: 100px
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  display: flex
+  flex-wrap: wrap
+
+  .payment
+    margin-right: 40px
+    margin-top: 40px
+
+
+//REMOVE ALL IN TOP!!! body, .payment, etc.
+
+.payment
+  width: 500px
+  border-radius: 30px
+  box-shadow: 0 0 10px rgba(191, 197, 199, 0.4)
+
+  &-head
+    border-top-right-radius: 30px
+    border-top-left-radius: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 40px
+
+  &-header
+    font-size: 14px
+
+  &-price
+    font-weight: 800
+    font-size: 22px
+
+
+  &-instruction
+    &-value
+      margin-top: 40px
+
+
+  &-destination, &-instruction
+    padding: 0 40px
+    margin-top: 25px
+    margin-bottom: 25px
+
+    &-header
+      font-size: 12px
+      color: rgb(149, 167, 175)
+      margin-bottom: 10px
+
+    &-value
+      font-size: 14px
+
+
+  &-form, &-card
+    padding: 0 40px
+
+    &-container
+      border-radius: 30px
+
+    &-row
+      display: flex
+      flex-flow: column
+
+      &:not(:last-child)
+        margin-bottom: 25px
+
+      label
+        font-weight: 300
+        font-size: 12px
+        color: rgb(149, 167, 175)
+
+      input
+        font-size: 14px
+        color: rgb(17, 17, 18)
+        border: none
+        border-bottom: 1px solid rgb(136, 152, 159)
+        outline: none
+        padding: 5px 0
+        margin-top: 5px
+
+    &-type
+      margin-bottom: 20px
+
+      &-header
+        font-size: 12px
+        color: rgb(149, 167, 175)
+        margin-bottom: 10px
+
+      &-value
+        border-radius: 10px
+        display: inline-block
+        padding: 7px 10px
+        text-align: center
+
+        h6
+          font-size: 12px
+          color: rgb(14, 14, 14)
+          margin-bottom: 5px
+
+        img
+          width: 80px
+
+    &-terms
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 20px
+
+      p
+        font-size: 12px
+        color: rgb(14, 14, 14)
+
+
+  &-card
+    &-container
+      padding: 30px 40px
+      margin-bottom: 20px
+
+    &-row
+      ::placeholder
+        color: white
+
+      label
+        color: white
+
+      input
+        border-color: #fafafa
+        background: none
+
+    .cols
+      display: flex
+      flex-direction: row
+
+    .payment-instruction
+      padding: 0
+      font-size: 12px
+      line-height: 1.7
+      padding-right: 80px
+      margin-bottom: 45px
+
+
+  &-button
+    width: 100%
+    border-radius: 30px
+    font-weight: 500
+    color: white
+    padding: 12px 0
+    font-size: 14px
+    margin-bottom: 20px
+    cursor: pointer
+    border: none
+    transform: .22s all
+
+    &:hover
+      box-shadow: none
+
+
+  &-footer
+    text-align: center
+    padding-bottom: 20px
+
+    .guarantee
+      color: rgb(149, 167, 175)
+      font-size: 12px
+      padding-left: 10px
+      width: 240px
+      margin: auto
+      background: url("../images/lock.svg") no-repeat left center / 11px
+      margin-bottom: 10px
+
+    img
+      width: 200px
+
+  &.color-green
+    .payment-head
+      background-color: rgb(244, 250, 242)
+      color: rgb(139, 195, 74)
+
+    .payment-form-terms
+      a
+        color: rgb(112, 156, 60)
+
+        &:visited, &:active, &:visited
+          color: rgb(112, 156, 60)
+
+    .payment-form-type-value
+      border: 1px solid rgb(112, 156, 60)
+
+    .payment-card-container
+      background: linear-gradient(to right, rgb(139, 195, 74) 0%, rgb(98, 143, 62) 100%)
+
+    .payment-button
+      background: rgb(139, 195, 74)
+      box-shadow: 0 0 10px rgba(139, 195, 74, 0.4)
+
+  &.color-blue
+    .payment-head
+      background-color: rgb(243, 251, 255)
+      color: rgb(0, 163, 255)
+
+    .payment-form-terms
+      a
+        color: rgb(0, 163, 255)
+
+        &:visited, &:active, &:visited
+          color: rgb(0, 163, 255)
+
+    .payment-form-type-value
+      border: 1px solid rgb(0, 163, 255)
+
+    .payment-card-container
+      background: linear-gradient(to right, rgb(0, 163, 255) 0%, rgb(0, 89, 143) 100%)
+
+    .payment-button
+      background: rgb(0, 163, 255)
+      box-shadow: 0 0 10px rgba(0, 163, 255, 0.4)
