@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="css/reset.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800&display=swap" rel="stylesheet">
+  <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="payment color-green">
@@ -71,7 +75,12 @@
         <div class="payment-card-container">
           <div class="payment-card-row">
             <label for="card-number">Номер карты</label>
-            <input id="card-number" type="text" placeholder="0000 0000 0000 0000">
+            <input id="card-number"
+                   type="text"
+                   placeholder="0000 0000 0000 0000"
+                   pattern="\d*"
+                   maxlength="19"
+            >
           </div>
           <div class="payment-card-row">
             <label for="card-holder">Имя и фамилия владельца карты</label>
@@ -79,12 +88,12 @@
           </div>
           <div class="payment-card-row cols">
             <div class="col">
-              <label for="card-valid">Срок действия карты</label>
-              <input id="card-valid" type="text" placeholder="MM / YY">
+              <label for="card-expiry">Срок действия карты</label>
+              <input id="card-expiry" type="text" placeholder="MM / YYYY" maxlength="9">
             </div>
             <div class="col">
               <label for="card-cvv">CVV</label>
-              <input id="card-cvv" type="text" placeholder="* * *">
+              <input id="card-cvv" type="password" placeholder="* * *" autocomplete="off" maxlength="3">
             </div>
           </div>
         </div>
@@ -105,7 +114,7 @@
   <div class="payment color-blue">
     <div class="payment-head">
       <h3 class="payment-header">Платеж №717717717</h3>
-      <p id="price" class="payment-price">450 Р</p>
+      <p id="price4" class="payment-price">450 Р</p>
     </div>
     <div class="payment-destination">
       <h4 class="payment-destination-header">
@@ -117,16 +126,16 @@
     </div>
     <form action="" class="payment-form">
       <div class="payment-form-row">
-        <label for="fullname">Имя и фамилия</label>
-        <input id="fullname" type="text" placeholder="Введите имя">
+        <label for="fullname2">Имя и фамилия</label>
+        <input id="fullname2" type="text" placeholder="Введите имя">
       </div>
       <div class="payment-form-row">
-        <label for="email">E-mail</label>
-        <input id="email" type="email" placeholder="Введите email">
+        <label for="email2">E-mail</label>
+        <input id="email2" type="email" placeholder="Введите email">
       </div>
       <div class="payment-form-row">
-        <label for="phone">Телефон</label>
-        <input id="phone" type="tel" placeholder="Введите номер телефона">
+        <label for="phone2">Телефон</label>
+        <input id="phone2" type="tel" placeholder="Введите номер телефона">
       </div>
       <div class="payment-form-type">
         <h5 class="payment-form-type-header">Способ оплаты</h5>
@@ -150,12 +159,10 @@
     </div>
   </div>
 
-
-
   <div class="payment color-blue">
     <div class="payment-head">
       <h3 class="payment-header">Платеж №717717717</h3>
-      <p id="price2" class="payment-price">450 Р</p>
+      <p id="price3" class="payment-price">450 Р</p>
     </div>
     <div class="payment-instruction">
       <p class="payment-instruction-value">
@@ -167,20 +174,25 @@
         <div class="payment-card-container">
           <div class="payment-card-row">
             <label for="card-number">Номер карты</label>
-            <input id="card-number" type="text" placeholder="0000 0000 0000 0000">
+            <input id="card-number2"
+                   type="text"
+                   placeholder="0000 0000 0000 0000"
+                   pattern="\d*"
+                   maxlength="19"
+            >
           </div>
           <div class="payment-card-row">
             <label for="card-holder">Имя и фамилия владельца карты</label>
-            <input id="card-holder" type="text" placeholder="CARDHOLDER NAME">
+            <input id="card-holder2" type="text" placeholder="CARDHOLDER NAME">
           </div>
           <div class="payment-card-row cols">
             <div class="col">
-              <label for="card-valid">Срок действия карты</label>
-              <input id="card-valid" type="text" placeholder="MM / YY">
+              <label for="card-expiry2">Срок действия карты</label>
+              <input id="card-expiry2" type="text" placeholder="MM / YYYY" maxlength="9">
             </div>
             <div class="col">
-              <label for="card-cvv">CVV</label>
-              <input id="card-cvv" type="text" placeholder="* * *">
+              <label for="card-cvv2">CVV</label>
+              <input id="card-cvv2" type="password" placeholder="* * *" autocomplete="off" maxlength="3">
             </div>
           </div>
         </div>
@@ -196,5 +208,7 @@
       <img src="images/payment-types.png" alt="payments">
     </div>
   </div>
+  <script src="scripts/dist/libs.min.js"></script>
+  <script src="scripts/dist/index.min.js"></script>
 </body>
 </html>

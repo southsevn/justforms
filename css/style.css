@@ -141,6 +141,7 @@ body .payment {
 }
 
 .payment-card-row input {
+  color: white;
   border-color: #fafafa;
   background: none;
 }
@@ -169,6 +170,7 @@ body .payment {
   cursor: pointer;
   border: none;
   transform: .22s all;
+  outline: none;
 }
 
 .payment-button:hover {
